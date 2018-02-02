@@ -24,13 +24,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'gradle clean build'
+                sh './gradlew clean build'
             }
         }
 
         stage('Package') {
             steps {
-                sh 'gradle shadowJar'
+                sh './gradlew shadowJar'
                 archiveArtifacts "build/libs/*.jar"
             }
         }
