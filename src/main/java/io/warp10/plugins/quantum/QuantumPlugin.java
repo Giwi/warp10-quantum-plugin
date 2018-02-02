@@ -21,6 +21,9 @@ import io.warp10.warp.sdk.AbstractWarp10Plugin;
 import java.lang.reflect.Method;
 import java.util.Properties;
 
+/**
+ * The type Quantum plugin.
+ */
 public class QuantumPlugin extends AbstractWarp10Plugin implements Runnable {
 
   private static final String QUANTUM_MAIN_CLASS = "io.warp10.quantum.Main";
@@ -29,6 +32,11 @@ public class QuantumPlugin extends AbstractWarp10Plugin implements Runnable {
 
   private Properties properties = null;
 
+  /**
+   * Init.
+   *
+   * @param properties the properties
+   */
   @Override
   public void init(Properties properties) {
     String host = properties.getProperty(CONF_QUANTUM_HOST);
@@ -42,6 +50,9 @@ public class QuantumPlugin extends AbstractWarp10Plugin implements Runnable {
     t.start();
   }
 
+  /**
+   * Run.
+   */
   @Override
   public void run() {
 
