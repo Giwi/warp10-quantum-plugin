@@ -12,7 +12,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
 archivesBaseName = 'warp10-quantum-plugin'
-def quantumVersion = '3.0.1'
+def quantumVersion = '3.0.3'
 version = quantumVersion
 group = 'io.warp10'
 
@@ -55,7 +55,7 @@ configurations {
 }
 
 dependencies {
-  provided group:'io.warp10', name: 'warpscript', version: '1.2.11-rc2'
+  provided group:'io.warp10', name: 'warpscript', version: '1.2.13'
   compile group:'io.warp10', name: 'warp10-quantum-server', version: quantumVersion
 }
 
